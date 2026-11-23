@@ -821,9 +821,10 @@ export default function Home() {
                           {completedLectures.includes(lecture.id)
                             ? "✓ Completed"
                             : "Video Lecture"}
-                        {lastWatched?.lectureId === lecture.id &&
-                          !completedLectures.includes(lecture.id &&
-                            false) && ""}
+                {lastWatched?.lectureId === lecture.id &&
+!completedLectures.includes(lecture.id) && (
+  <span style={{ color: "#f59e0b" }}> • Last Watched</span>
+)}
                       </p>
                       </div>
                     </div>
